@@ -31,7 +31,9 @@ app.use(cors({
     'http://localhost:3000',
     'https://vspaze-main.onrender.com',
     'https://vspaze-admin.onrender.com',
-    'https://vspaze-teacher.onrender.com'
+    'https://vspaze-teacher.onrender.com',
+    'https://vspaze.com',
+    'http://vspaze.com'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
