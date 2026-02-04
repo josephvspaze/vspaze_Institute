@@ -83,7 +83,7 @@ function App() {
   };
 
   return (
-    <div className="flex h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="flex h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900">
       <Sidebar 
         isOpen={sidebarOpen} 
         onClose={() => setSidebarOpen(false)}

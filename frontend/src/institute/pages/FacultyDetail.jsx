@@ -14,7 +14,7 @@ const FacultyDetail = () => {
 
   const fetchFacultyMember = async () => {
     try {
-      const response = await api.get('/admin/faculty');
+      const response = await api.get('/admin/faculty/public');
       const faculty = response.data.faculty || [];
       const member = faculty.find(f => f._id === id);
       setFacultyMember(member);

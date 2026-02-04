@@ -6,6 +6,18 @@ const Test = require('../models/test/Test');
 const Faculty = require('../models/faculty/Faculty');
 const Student = require('../models/student/Student');
 
+// PUBLIC ROUTE - Get all active faculty (for public website)
+router.get('/', async (req, res) => {
+  try {
+    const faculty = await Faculty.find({ status: 'active' })
+      .select('-password -salary')
+      .populate('assignedCourses', 'name');
+    res.json({ success: true, faculty });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 // Dashboard
 router.get('/dashboard', protect(['faculty']), async (req, res) => {
   try {

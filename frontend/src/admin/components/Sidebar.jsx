@@ -42,18 +42,18 @@ const Sidebar = ({ isOpen, onClose, activeSection, setActiveSection }) => {
       )}
 
       {/* Sidebar */}
-      <aside className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-white to-blue-50 shadow-xl z-50 transform transition-transform duration-300 ${
+      <aside className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-slate-900 to-slate-800 shadow-xl z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        <div className="p-4 border-b border-gray-200 flex items-center justify-between">
+        <div className="p-4 border-b border-cyan-500/20 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
               <GraduationCap className="w-5 h-5 text-white" />
             </div>
-            <span className="font-bold text-gray-900">vspaze</span>
+            <span className="font-bold text-white">vspaze</span>
           </div>
           <button onClick={onClose} className="lg:hidden">
-            <X className="w-6 h-6 text-gray-600" />
+            <X className="w-6 h-6 text-cyan-400" />
           </button>
         </div>
 
@@ -72,8 +72,8 @@ const Sidebar = ({ isOpen, onClose, activeSection, setActiveSection }) => {
                 }}
                 className={`w-full flex items-center justify-between px-4 py-3 rounded-lg mb-2 transition-all ${
                   activeSection === item.id
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md'
+                    : 'text-cyan-100 hover:bg-slate-700'
                 }`}
               >
                 <div className="flex items-center space-x-3">
@@ -94,8 +94,8 @@ const Sidebar = ({ isOpen, onClose, activeSection, setActiveSection }) => {
                     }}
                     className={`w-full flex items-center justify-between px-4 py-2 rounded-lg transition-all ${
                       activeSection === 'students'
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-600 hover:bg-gray-100'
+                        ? 'bg-cyan-500/20 text-cyan-300'
+                        : 'text-cyan-200 hover:bg-slate-700'
                     }`}
                   >
                     <span className="text-sm">All Students</span>
@@ -107,8 +107,8 @@ const Sidebar = ({ isOpen, onClose, activeSection, setActiveSection }) => {
                     }}
                     className={`w-full flex items-center justify-between px-4 py-2 rounded-lg transition-all ${
                       activeSection === 'pending-students'
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-600 hover:bg-gray-100'
+                        ? 'bg-cyan-500/20 text-cyan-300'
+                        : 'text-cyan-200 hover:bg-slate-700'
                     }`}
                   >
                     <span className="text-sm">New Students</span>
@@ -129,8 +129,8 @@ const Sidebar = ({ isOpen, onClose, activeSection, setActiveSection }) => {
                     }}
                     className={`w-full flex items-center justify-between px-4 py-2 rounded-lg transition-all ${
                       activeSection === 'faculty'
-                        ? 'bg-green-100 text-green-700'
-                        : 'text-gray-600 hover:bg-gray-100'
+                        ? 'bg-cyan-500/20 text-cyan-300'
+                        : 'text-cyan-200 hover:bg-slate-700'
                     }`}
                   >
                     <span className="text-sm">All Faculty</span>
@@ -142,8 +142,8 @@ const Sidebar = ({ isOpen, onClose, activeSection, setActiveSection }) => {
                     }}
                     className={`w-full flex items-center justify-between px-4 py-2 rounded-lg transition-all ${
                       activeSection === 'pending-faculty'
-                        ? 'bg-green-100 text-green-700'
-                        : 'text-gray-600 hover:bg-gray-100'
+                        ? 'bg-cyan-500/20 text-cyan-300'
+                        : 'text-cyan-200 hover:bg-slate-700'
                     }`}
                   >
                     <span className="text-sm">New Faculty</span>

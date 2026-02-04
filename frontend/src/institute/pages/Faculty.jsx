@@ -12,7 +12,7 @@ const Faculty = () => {
 
   const fetchFaculty = async () => {
     try {
-      const response = await api.get('/admin/faculty');
+      const response = await api.get('/admin/faculty/public');
       setFaculty(response.data.faculty || []);
     } catch (error) {
       console.error('Error fetching faculty:', error);

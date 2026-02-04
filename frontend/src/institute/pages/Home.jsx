@@ -145,36 +145,36 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-slate-900">
+    <div style={{ background: 'linear-gradient(135deg, #007991, #78ffd6)' }}>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 py-12 overflow-hidden">
+      <section className="relative py-12 overflow-hidden" style={{ background: 'rgba(0, 0, 0, 0.25)' }}>
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-cyan-400/30 rounded-full blur-3xl animate-blob top-0 -left-20"></div>
-          <div className="absolute w-96 h-96 bg-blue-400/30 rounded-full blur-3xl animate-blob animation-delay-2000 top-0 right-0"></div>
-          <div className="absolute w-96 h-96 bg-teal-400/30 rounded-full blur-3xl animate-blob animation-delay-4000 bottom-0 left-1/2"></div>
+          <div className="absolute w-96 h-96 bg-teal-400/30 rounded-full blur-3xl animate-blob top-0 -left-20"></div>
+          <div className="absolute w-96 h-96 bg-teal-500/30 rounded-full blur-3xl animate-blob animation-delay-2000 top-0 right-0"></div>
+          <div className="absolute w-96 h-96 bg-emerald-400/30 rounded-full blur-3xl animate-blob animation-delay-4000 bottom-0 left-1/2"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left animate-fade-in-up">
-              <div className="inline-block mb-4 px-6 py-2 bg-cyan-500/20 backdrop-blur-sm rounded-full text-cyan-300 font-semibold animate-pulse-glow border border-cyan-400/30">
+              <div className="inline-block mb-4 px-6 py-2 bg-teal-500/20 backdrop-blur-sm rounded-full text-teal-200 font-semibold animate-pulse-glow border border-teal-400/30">
                 💻 Engineering Excellence Online
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
                 Master Tech Skills
-                <span className="block bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-300 bg-clip-text text-transparent animate-typing text-3xl sm:text-4xl md:text-5xl">
+                <span className="block bg-gradient-to-r from-teal-200 via-emerald-200 to-teal-300 bg-clip-text text-transparent animate-typing text-3xl sm:text-4xl md:text-5xl">
                   Build Your Future
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-cyan-100 mb-10 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-teal-50 mb-10 leading-relaxed">
                 Learn Full Stack, Data Science, Cloud & AI from industry experts. 100% online with live coding sessions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start items-center">
-                <Link to="/student-registration" className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all transform hover:scale-105 flex items-center space-x-3 w-full sm:w-auto justify-center">
+                <Link to="/student-registration" className="group bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:shadow-2xl hover:shadow-teal-500/50 transition-all transform hover:scale-105 flex items-center space-x-3 w-full sm:w-auto justify-center">
                   <span>Start Learning Free</span>
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
                 </Link>
-                <button onClick={() => setIsDemoModalOpen(true)} className="group bg-transparent border-3 border-cyan-400 text-cyan-300 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:bg-cyan-400 hover:text-slate-900 transition-all flex items-center space-x-3 w-full sm:w-auto justify-center">
+                <button onClick={() => setIsDemoModalOpen(true)} className="group bg-transparent border-3 border-teal-400 text-teal-200 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:bg-teal-400 hover:text-white transition-all flex items-center space-x-3 w-full sm:w-auto justify-center">
                   <Play className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span>Watch Demo</span>
                 </button>
@@ -189,11 +189,11 @@ const Home = () => {
                       student: { id: 'demo-student', name: 'Demo Student', email: 'demo@student.com', enrolledCourses: ['Full Stack Development'], dueAmount: 0 }
                     }));
                   }}
-                  className="text-cyan-300 hover:text-cyan-100 font-semibold text-sm sm:text-base transition-colors"
+                  className="text-teal-200 hover:text-teal-50 font-semibold text-sm sm:text-base transition-colors"
                 >
                   Already a Student? Login →
                 </Link>
-                <span className="hidden sm:inline text-cyan-400">|</span>
+                <span className="hidden sm:inline text-teal-300">|</span>
                 <Link 
                   to="/teacher" 
                   onClick={(e) => {
@@ -203,7 +203,7 @@ const Home = () => {
                       teacher: { id: 'demo-teacher', name: 'Demo Teacher', email: 'demo@teacher.com', assignedCourses: ['Full Stack Development'] }
                     }));
                   }}
-                  className="text-green-300 hover:text-green-100 font-semibold text-sm sm:text-base transition-colors"
+                  className="text-emerald-200 hover:text-emerald-50 font-semibold text-sm sm:text-base transition-colors"
                 >
                   Teacher Login →
                 </Link>
@@ -226,15 +226,15 @@ const Home = () => {
               </div>
             </div>
             <div className="hidden md:block animate-fade-in -mt-16">
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Coding and programming" className="rounded-3xl shadow-2xl shadow-cyan-500/20 transform hover:scale-105 transition-all border border-cyan-500/20" />
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Coding and programming" className="rounded-3xl shadow-2xl shadow-teal-500/20 transform hover:scale-105 transition-all border border-teal-500/20" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-900 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-cyan-900/20 to-transparent"></div>
+      <section className="py-20 relative" style={{ background: 'linear-gradient(135deg, #007991, #78ffd6)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-900/20 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -251,11 +251,11 @@ const Home = () => {
               };
               return (
                 <div key={idx} className="text-center">
-                  <div className="w-20 h-20 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-4 border border-cyan-400 shadow-lg shadow-cyan-400/50 hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-4 border border-teal-400 shadow-lg shadow-teal-400/50 hover:scale-110 transition-transform">
                     <stat.icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">{stat.count}</h3>
-                  <p className="text-cyan-100 font-semibold">{stat.label}</p>
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent mb-2">{stat.count}</h3>
+                  <p className="text-teal-100 font-semibold">{stat.label}</p>
                 </div>
               );
             })}
@@ -264,7 +264,7 @@ const Home = () => {
       </section>
 
       {/* Featured Courses */}
-      <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #007991, #78ffd6)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-2 bg-cyan-500/20 text-cyan-300 rounded-full font-semibold mb-4 border border-cyan-400/30">
