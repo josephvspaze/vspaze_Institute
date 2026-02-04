@@ -138,6 +138,16 @@ exports.getAllFaculty = async (req, res) => {
   }
 };
 
+// Get Public Faculty (only active)
+exports.getPublicFaculty = async (req, res) => {
+  try {
+    const faculty = await Faculty.find({ status: 'active' }).populate('assignedCourses');
+    res.json({ success: true, faculty });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 // Update Faculty
 exports.updateFaculty = async (req, res) => {
   try {

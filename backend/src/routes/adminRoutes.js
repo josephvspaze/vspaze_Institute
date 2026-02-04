@@ -11,11 +11,15 @@ const {
   updateStudent,
   deleteStudent,
   getAllFaculty,
+  getPublicFaculty,
   updateFaculty,
   deleteFaculty,
   recordPayment,
   getAllPayments
 } = require('../controllers/adminController');
+
+// Public route for fetching active faculty (for institute website)
+router.get('/faculty/public', getPublicFaculty);
 
 // Protect all admin routes
 router.use(protect(['admin', 'superadmin']));
