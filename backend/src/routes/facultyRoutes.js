@@ -18,6 +18,19 @@ router.get('/', async (req, res) => {
   }
 });
 
+// PUBLIC ROUTE - Get single faculty by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const faculty = await Faculty.findById(req.params.id)
+      .select('-password -salary')
+      .populate('assignedCourses', 'name');
+    if (!faculty) return res.status(404).json({ success: false, message: 'Faculty not found' });
+    res.json({ success: true, faculty });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 // Dashboard
 router.get('/dashboard', protect(['faculty']), async (req, res) => {
   try {
