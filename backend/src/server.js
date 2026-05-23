@@ -32,6 +32,7 @@ app.use(cors({
     'http://localhost:3001',
     'http://localhost:3002',
     'https://vspaze-main.onrender.com',
+    'https://vspaze-officail.onrender.com',
     'https://vspaze-admin.onrender.com',
     'https://vspaze-teacher.onrender.com',
     'https://vspaze.com',
