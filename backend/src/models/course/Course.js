@@ -49,6 +49,10 @@ const courseSchema = new mongoose.Schema({
   batches: {
     type: Number,
     default: 0
+  },
+  brochureUrl: {
+    type: String,
+    default: ''
   }
 }, {
   timestamps: true
