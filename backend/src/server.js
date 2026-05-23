@@ -14,6 +14,7 @@ const courseRoutes = require('./routes/courseRoutes');
 const batchRoutes = require('./routes/batchRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const facultyRoutes = require('./routes/facultyRoutes');
+const leadRoutes = require('./routes/leadRoutes');
 
 // Initialize Express
 const app = express();
@@ -70,6 +71,7 @@ app.use('/api/courses', courseRoutes);
 app.use('/api/batches', batchRoutes);
 app.use('/api/student', studentRoutes);
 app.use('/api/faculty', facultyRoutes);
+app.use('/api/leads', leadRoutes);
 
 // Error Handler
 app.use(errorHandler);
