@@ -37,7 +37,14 @@ const batchSchema = new mongoose.Schema({
   maxStudents: {
     type: Number,
     default: 50
-  }
+  },
+  liveClasses: [{
+    title: { type: String, required: true },
+    meetLink: { type: String, required: true },
+    scheduledAt: { type: Date, required: true },
+    status: { type: String, enum: ['upcoming', 'live', 'ended'], default: 'upcoming' },
+    createdAt: { type: Date, default: Date.now }
+  }]
 }, {
   timestamps: true
 });

@@ -9,7 +9,7 @@ exports.getProfile = async (req, res) => {
   try {
     const student = await Student.findById(req.user._id)
       .populate('enrolledCourses')
-      .populate('batch');
+      .populate({ path: 'batch', populate: { path: 'course faculty', select: 'name specialization' } });
     res.json({ success: true, student });
   } catch (error) {
     console.error('Get profile error:', error);

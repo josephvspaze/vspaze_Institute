@@ -32,6 +32,29 @@ router.put('/faculty/approve/:id', approveFaculty);
 router.get('/students', getAllStudents);
 router.put('/students/:id', updateStudent);
 router.delete('/students/:id', deleteStudent);
+
+// Assign course + batch to student
+router.put('/students/:id/assign', async (req, res) => {
+  try {
+    const { enrolledCourses, batch } = req.body;
+    const Student = require('../models/student/Student');
+    const Batch = require('../models/batch/Batch');
+
+    const student = await Student.findByIdAndUpdate(
+      req.params.id,
+      { enrolledCourses, batch: batch || null },
+      { new: true }
+    ).populate('enrolledCourses batch');
+
+    // Add student to batch.students if batch selected
+    if (batch) {
+      await Batch.findByIdAndUpdate(batch, { $addToSet: { students: req.params.id } });
+    }
+    res.json({ success: true, student });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
 router.get('/faculty', getAllFaculty);
 router.put('/faculty/:id', updateFaculty);
 router.delete('/faculty/:id', deleteFaculty);
